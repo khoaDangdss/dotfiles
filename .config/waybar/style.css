@@ -1,0 +1,109 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #cdd6f4;
+}
+
+/* --- LEFT MODULES --- */
+#workspaces {
+    background-color: #101a21;
+    margin: 4px 0 4px 8px;
+    border-radius: 10px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #585b70;
+    border-radius: 8px;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    background-color: #1e2d38;
+}
+
+#workspaces button:hover {
+    color: #f5e0dc;
+}
+
+#window {
+    background-color: #101a21;
+    color: #94e2d5;
+    margin: 4px 0 4px 6px;
+    padding: 0 12px;
+    border-radius: 10px;
+}
+
+/* --- CENTER MODULE --- */
+#clock {
+    background-color: #101a21;
+    color: #f5e0dc;
+    margin: 4px 0;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* --- RIGHT MODULES --- */
+#pulseaudio, #network, #cpu, #memory, #tray {
+    background-color: #101a21;
+    margin: 4px 0;
+    padding: 0 12px;
+}
+
+#pulseaudio {
+    color: #f5c2e7;
+    border-radius: 10px 0 0 10px;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#cpu {
+    color: #f9e2af;
+}
+
+#memory {
+    color: #a6e3a1;
+}
+
+#tray {
+    margin-right: 8px;
+    border-radius: 0 10px 10px 0;
+}
+#custom-notification {
+    background-color: #101a21;
+    color: #f5c2e7;
+    margin: 2px 8px 2px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#custom-notification.inhibited,
+#custom-notification.dnd {
+    color: #f38ba8;
+}
+
+#custom-cava_mviz {
+    background-color: #101a21;
+    color: #94e2d5;
+    margin: 4px 0 4px 6px;
+    padding: 0 12px;
+    border-radius: 10px;
+}
+#custom-power {
+    background-color: #101a21;
+    color: #f38ba8; /* Catppuccin Red */
+    margin: 4px 8px 4px 0;
+    padding: 0 12px;
+    border-radius: 10px;
+}

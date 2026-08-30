@@ -1,0 +1,95 @@
+/* Catppuccin Slate SwayNC Theme */
+
+@define-color cc-bg #101a21;
+@define-color notif-bg #1e2d38;
+@define-color text-color #cdd6f4;
+@define-color text-dim #a6adc8;
+@define-color accent #89b4fa;
+@define-color urgent #f38ba8;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+/* Main Control Center Panel */
+.control-center {
+    background-color: @cc-bg;
+    border: 2px solid @accent;
+    border-radius: 12px;
+    padding: 12px;
+    color: @text-color;
+}
+
+/* Notification Popup Windows */
+.notification-row {
+    outline: none;
+    margin: 6px;
+}
+
+.notification {
+    background: @notif-bg;
+    border-radius: 10px;
+    border: 1px solid #313244;
+    padding: 8px;
+}
+
+.notification-content {
+    background: transparent;
+    padding: 6px;
+}
+
+.close-button {
+    background: @urgent;
+    color: @cc-bg;
+    border-radius: 50%;
+    margin: 4px;
+    padding: 2px;
+}
+
+.summary {
+    font-weight: bold;
+    color: @accent;
+}
+
+.body {
+    color: @text-color;
+}
+
+.time {
+    color: @text-dim;
+    font-size: 11px;
+}
+
+/* Header & Toggle Buttons */
+.widget-title {
+    color: @accent;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 6px;
+}
+
+.widget-title > button {
+    font-size: 12px;
+    color: @text-color;
+    background: @notif-bg;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+.widget-dnd {
+    color: @text-color;
+    background: @notif-bg;
+    padding: 8px;
+    margin: 6px;
+    border-radius: 8px;
+}
+
+.widget-dnd > switch {
+    background: #313244;
+    border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+    background: @accent;
+}

@@ -10,7 +10,7 @@ echo "==> Setting up dotfiles from $DOTFILES_DIR"
 
 mkdir -p "$CONFIG_DIR"
 
-# Target config items
+# Target config items for ~/.config
 ITEMS=(
     "hypr"
     "waybar"
@@ -51,5 +51,25 @@ for item in "${ITEMS[@]}"; do
         ln -s "$SRC" "$DEST"
     fi
 done
+
+# Link ~/.zshrc
+if [ -e "$DOTFILES_DIR/.zshrc" ]; then
+    DEST="$HOME/.zshrc"
+    SRC="$DOTFILES_DIR/.zshrc"
+    if [ -e "$DEST" ] || [ -L "$DEST" ]; then
+        if [ "$(readlink -f "$DEST")" != "$(readlink -f "$SRC")" ]; then
+            mkdir -p "$BACKUP_DIR"
+            echo "  [BACKUP] Moving existing $DEST to $BACKUP_DIR/"
+            mv "$DEST" "$BACKUP_DIR/"
+            echo "  [LINK] Linking $SRC -> $DEST"
+            ln -s "$SRC" "$DEST"
+        else
+            echo "  [OK] .zshrc is already properly linked."
+        fi
+    else
+        echo "  [LINK] Linking $SRC -> $DEST"
+        ln -s "$SRC" "$DEST"
+    fi
+fi
 
 echo "==> Dotfiles setup complete!"
